@@ -1,6 +1,7 @@
 <?php
 
 require_once "databaseFunctions.php";
+require_once "htmlFunctions.php";
 
 $db=createDBConnection('RPG-Books','root','password');
 $collection = retrieveCollectionData($db);
@@ -24,16 +25,7 @@ $collection = retrieveCollectionData($db);
             <li>Add</li>
         </ul>
     </nav>
-    <?php
-        foreach ($collection as $item){
-            echo '<div class="collectionItem">';
-            echo "<img src='".$item['image_source']."'>";
-            echo "<p>Title: ".$item['title']."</p>";
-            echo "<p>Price Paid: £".$item['price_paid']."</p>";
-            echo "<p> Date Acquired (Aproximate): ".$item['acquisition_date']."</p>";
-            echo '<button type="button">Delete</button>';
-            echo '</div>';
-        }
-    ?>
+    <?=outputCollection($collection)?>
+    <pre><?=var_dump($collection)?></pre>
 </body>
 </html>
