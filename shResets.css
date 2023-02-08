@@ -1,0 +1,74 @@
+/*
+My commonly used CSS resets. I also make use of normalize.css.
+
+Sources:
+"What should a modern CSS boilerplate look like?", Daniel Schwarz, https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/ (accessed 2022-02-07)
+*/
+
+/*Definitely reset the box model*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*What you do with borders is up to you*/
+* {
+    border: none;
+}
+/*Force images to behave*/
+img {
+    display: block;
+    max-width: 100%;
+}
+/*Reset (most) lists*/
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+menu,
+ol,
+ul {
+    padding-left: 0;
+}
+article ol,
+article ul {
+    list-style-position: inside;
+}
+/*Enhance link underlines*/
+a {
+    /* Places underlines below the descenders */
+    text-underline-position: under;
+    /* Sets the thickness as a percentage of the font size */
+    text-decoration-thickness: 8;
+}
+/*Change the root font size*/
+html {
+    font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+}
+/*Disable the text inflation algorithm*/
+html {
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+    text-size-adjust: none; /* for other mobile browsers */
+}
+/*Enable smooth scrolling*/
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+/*Rethink how focus works*/
+:focus:not(:focus-visible) {
+    outline: none;
+}
+/*Provide interactive elements with a cursor*/
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}

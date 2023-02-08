@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.10.2-MariaDB-1:10.10.2+maria~ubu2204)
 # Database: rpg-books
-# Generation Time: 2023-02-06 13:57:25 +0000
+# Generation Time: 2023-02-08 11:45:42 +0000
 # ************************************************************
 
 
@@ -29,7 +29,7 @@ CREATE TABLE `books` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
   `price_paid` float(5,2) NOT NULL,
-  `aquisition_date` date NOT NULL,
+  `acquisition_date` date NOT NULL,
   `image_source` varchar(2048) NOT NULL DEFAULT '',
   `deleted` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
@@ -38,7 +38,7 @@ CREATE TABLE `books` (
 LOCK TABLES `books` WRITE;
 /*!40000 ALTER TABLE `books` DISABLE KEYS */;
 
-INSERT INTO `books` (`id`, `title`, `price_paid`, `aquisition_date`, `image_source`, `deleted`)
+INSERT INTO `books` (`id`, `title`, `price_paid`, `acquisition_date`, `image_source`, `deleted`)
 VALUES
 	(1,'The Riddle of Steel',53.95,'2017-06-21','https://upload.wikimedia.org/wikipedia/en/2/2a/Riddle_of_steel_rpg_cover.gif',0),
 	(2,'AD&D 1st Edition Dungeon Masters Guide',0.50,'2000-01-01','https://upload.wikimedia.org/wikipedia/en/8/8c/DungeonMasterGuide4Cover.jpg',0),
