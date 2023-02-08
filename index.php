@@ -21,7 +21,8 @@ $collection = retrieveCollectionData($db);
 <body>
     <nav>
         <ul>
-            <li><a href="">Collection</a></li>
+            <li><a href="index.php">Collection</a></li>
+            <lis><a href="add-new-book.php">Add</a></lis>
         </ul>
     </nav>
     <?=outputCollection($collection)?>
