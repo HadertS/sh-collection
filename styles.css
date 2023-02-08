@@ -1,1 +1,30 @@
-#collectionItemContainer
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem
+}
+
+nav {
+    border: 0.2rem solid grey;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    margin-left: 2.5rem;
+}
+
+.collectionItemContainer {
+    display: flex;
+    border: 0.2rem solid grey;
+    margin: 1rem;
+}
+
+.collectionItemContainer img {
+    width:100%;
+    max-width:20rem;
+}
+
+.collectionItemInfo {
+    margin-left: 1rem;
+}
