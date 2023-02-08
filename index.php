@@ -26,6 +26,5 @@ $collection = retrieveCollectionData($db);
         </ul>
     </nav>
     <?=outputCollection($collection)?>
-    <pre><?=var_dump($collection)?></pre>
 </body>
 </html>
