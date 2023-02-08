@@ -16,7 +16,6 @@ function outputCollection(array $collection):string
             $output .= "<p>Title: " . $item['title'] . "</p>";
             $output .= "<p>Price Paid: £" . $item['price_paid'] . "</p>";
             $output .= "<p> Date Acquired (Approximate): " . $item['acquisition_date'] . "</p>";
-            $output .= "<button type='button'>Delete</button>";
             $output .= "</div>";
             $output .= "</div>";
         }
