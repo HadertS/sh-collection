@@ -3,7 +3,7 @@
 require_once "databaseFunctions.php";
 require_once "htmlFunctions.php";
 
-$db=createDBConnection('RPG-Books','root','password');
+$db=createDBConnection('rpg-books','root','password');
 $collection = retrieveCollectionData($db);
 ?>
 
