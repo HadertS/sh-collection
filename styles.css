@@ -28,3 +28,23 @@ ul {
 .collectionItemInfo {
     margin-left: 1rem;
 }
+
+.addForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.addForm form{
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem solid grey;
+    min-width: 100%;
+    padding: 3rem;
+}
+
+input{
+    border: 0.1rem solid black;
+    margin: 0.5rem 0;
+}
