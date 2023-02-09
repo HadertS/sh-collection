@@ -40,8 +40,7 @@ ul {
     display: flex;
     flex-direction: column;
     border: 0.2rem solid grey;
-    min-width: 100rem;
-    max-width: 500rem;
+    min-width: 100%;
     padding: 3rem;
 }
 
