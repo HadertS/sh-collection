@@ -19,7 +19,7 @@
         </ul>
     </nav>
     <div class="addForm">
-        <form action=insert-book.php" method="post">
+        <form action="insert-book.php" method="post">
             <label for="title">Title</label>
             <input type="text" name="title" id="title" required>
             <label for="price_paid">Price Paid (GBP)</label>
