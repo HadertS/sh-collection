@@ -64,3 +64,11 @@ function validateInput(array $sanitisedArray):array{
     return $sanitisedArray;
 }
 
+function insertNewBook(PDO $db,array $sanitizedArray):void{
+    $stmnt = $db->prepare("INSERT INTO `books` (`title`, `price_paid`,`acquisition_date`,`image_source`) VALUES (:title, :price_paid,:acquisition_date,:image_source);");
+    $stmnt->bindParam(':title', $sanitizedArray['title']);
+    $stmnt->bindParam(':price_paid', $sanitizedArray['price_paid']);
+    $stmnt->bindParam(':acquisition_date', $sanitizedArray['acquisition_date']);
+    $stmnt->bindParam(':image_source', $sanitizedArray['image_source']);
+    $stmnt->execute();
+}

@@ -1,7 +1,7 @@
 <?php
 require_once "databaseFunctions.php";
 
-function test(array $formInput):string {
+function validateAndSanitize(array $formInput):string {
     if (!isset($formInput['title'],$formInput['price_paid'],$formInput['acquisition_date'],$formInput['image_source'])){
         header('Location: add-new-book.php');
         die();
@@ -12,8 +12,13 @@ function test(array $formInput):string {
     if (isset($formInput['errorMessage'])){
         return $formInput['errorMessage'];
     }
-    return "Accepted";
+    else {
+        $db=createDBConnection('rpg-books','root','password');
+        insertNewBook($db,$formInput);
+        header('Location: add-new-book.php');
+        die();
+    }
 }
 
 $formInput = $_POST;
-echo test($formInput);
+echo validateAndSanitize($formInput);
