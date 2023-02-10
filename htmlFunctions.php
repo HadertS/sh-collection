@@ -22,3 +22,4 @@ function outputCollection(array $collection):string
     }
     return $output;
 }
+
