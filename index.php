@@ -22,7 +22,7 @@ $collection = retrieveCollectionData($db);
     <nav>
         <ul>
             <li><a href="index.php">Collection</a></li>
-            <lis><a href="add-new-book.php">Add</a></lis>
+            <li><a href="add-new-book.php">Add</a></li>
         </ul>
     </nav>
     <?=outputCollection($collection)?>
